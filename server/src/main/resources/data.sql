@@ -31,13 +31,11 @@ INSERT INTO oauth_client_details (
   client_secret,
   scope,
   authorized_grant_types,
-  web_server_redirect_uri,
   authorities
 ) VALUES (
-  'my-client-with-registered-redirect',
-  '$2a$10$L19dxrqfOawStLsRwkt6t.AEBO0p3321s/8Sg9Ulh1OzkVxOWf/1.',
-  'read,trust',
-  'authorization_code',
-  'http://localhost:8888/client',
-  'ROLE_CLIENT'
+  'my-resource',
+  '$2a$10$An5EsiCaW60oUev8sNWQhO2TCjjLGnAaMQk.RTIM7rNCKAKeCvYqO', -- my-resource-pass
+  'read,write,trust',
+  'client',
+  'ROLE_RESOURCE'
 );

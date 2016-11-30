@@ -4,7 +4,7 @@ server:
 security:
   oauth2:
     client:
-      client-id: my-trusted-client
-      client-secret: my-trusted-client-pass
+      client-id: my-resource
+      client-secret: my-resource-pass
     resource:
       token-info-uri: http://localhost:8080/oauth/check_token
