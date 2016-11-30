@@ -1,0 +1,10 @@
+server:
+  port: 8888
+
+security:
+  oauth2:
+    client:
+      client-id: my-trusted-client
+      client-secret: my-trusted-client-pass
+    resource:
+      token-info-uri: http://localhost:8080/oauth/check_token
