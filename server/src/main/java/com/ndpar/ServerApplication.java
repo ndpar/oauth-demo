@@ -45,10 +45,10 @@ http://localhost:8080/oauth/check_token
 
  */
 @SpringBootApplication
-public class Application {
+public class ServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(ServerApplication.class, args);
     }
 
     @Autowired
