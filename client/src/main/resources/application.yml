@@ -1,0 +1,13 @@
+server:
+  port: 9999
+  context-path: /client
+
+security:
+  oauth2:
+    client:
+      client-id: my-trusted-client
+      client-secret: my-trusted-client-pass
+      access-token-uri: http://localhost:8080/oauth/token
+      user-authorization-uri: http://localhost:8080/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:8080/oauth/check_token
