@@ -2,12 +2,25 @@ server:
   port: 9999
   context-path: /client
 
+oauth2:
+  server:
+    url: http://localhost:8080
+
 security:
   oauth2:
     client:
       client-id: my-trusted-client
       client-secret: my-trusted-client-pass
-      access-token-uri: http://localhost:8080/oauth/token
-      user-authorization-uri: http://localhost:8080/oauth/authorize
+      access-token-uri: ${oauth2.server.url}/oauth/token
+      user-authorization-uri: ${oauth2.server.url}/oauth/authorize
     resource:
-      token-info-uri: http://localhost:8080/oauth/check_token
+      token-info-uri: ${oauth2.server.url}/oauth/check_token
+
+---
+
+spring:
+  profiles: cloud
+
+oauth2:
+  server:
+    url: http://oauth-server.local.pcfdev.io

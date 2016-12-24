@@ -1,0 +1,6 @@
+---
+applications:
+- name: oauth-server
+  memory: 1G
+  random-route: true
+  path: target/oauth-server.jar
