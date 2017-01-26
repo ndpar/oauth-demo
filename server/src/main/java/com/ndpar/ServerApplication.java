@@ -43,6 +43,13 @@ curl -v -X POST -H "Content-Type:application/x-www-form-urlencoded" \
 -d token=9a20a810-5299-49dc-a10b-425c30917a3e \
 http://localhost:8080/oauth/check_token
 
+ * CLIENT Flow
+
+curl -v -X POST -H "Content-Type:application/x-www-form-urlencoded" \
+-u my-trusted-client:my-trusted-client-pass \
+-d grant_type=client_credentials \
+http://localhost:8080/oauth/token
+
  */
 @SpringBootApplication
 public class ServerApplication {

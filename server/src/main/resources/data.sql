@@ -21,7 +21,7 @@ INSERT INTO oauth_client_details (
   'my-trusted-client',
   '$2a$10$lX0B5Nu3qhFJi4wDyabMne2OwQoEa7eRVNY7w/4VDdLBCXgYS4/wu', -- my-trusted-client-pass
   'read,write,trust',
-  'password,authorization_code,refresh_token,implicit',
+  'password,authorization_code,refresh_token,implicit,client_credentials',
   'http://localhost:9999/client',
   'ROLE_CLIENT,ROLE_TRUSTED_CLIENT',
   60
